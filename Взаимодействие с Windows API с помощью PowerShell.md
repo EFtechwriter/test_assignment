@@ -28,9 +28,7 @@
 
 #### Using the Add-Type cmdlet to call the CopyFile function
 
-The `Add-Type` cmdlet lets you add a .NET Framework object to your PowerShell session by compiling C# code at runtime. 
-
-The below example demonstrates how to call the Windows API [CopyFile](https://learn.microsoft.com/en-us/windows/win32/api/winbase/nf-winbase-copyfile) function within PowerShell using `Add-Type`. To wrap it up, we will create the `Copy-RawItem` function and define its arguments: 
+The below example demonstrates how to call the Windows API [CopyFile](https://learn.microsoft.com/en-us/windows/win32/api/winbase/nf-winbase-copyfile) function within PowerShell using the `Add-Type` cmdlet. To wrap it up, we will create the `Copy-RawItem` function and define its arguments: 
 
 <pre>function Copy-RawItem
 {
@@ -60,7 +58,7 @@ The below example demonstrates how to call the Windows API [CopyFile](https://le
 
 > Note: make sure that you have defined the `CopyFile` method as public in order to easily interact with it in Windows PowerShell. 
 
-3.	Create an object using `Add-Type` to call the CopyFile function from Windows API.
+3.	Create an object using `Add-Type` to call `CopyFile` from Windows API.
 Call `Add-Type`, specifying the C# source code, a type name, and a namespace, to create the new type in WindowsPowerShell.
 
 <pre>
